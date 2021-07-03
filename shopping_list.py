@@ -23,6 +23,12 @@ def addList(shopping, item, index):
 def removeList(shopping, index):
     del(shopping[index])
 
+# Function that removes all items from the list
+
+
+def removeAll():
+    theList.delete(0, END)
+
 
 # Function that adds an item to the list
 def add():
@@ -40,12 +46,6 @@ def remove():
     print(index)
     removeList(shopping, index)
     theList.delete(index)
-
-# Function that removes all items from the list
-
-
-def removeAll():
-    theList.delete(0, END)
 
 
 # Empty Shopping List
@@ -76,8 +76,10 @@ Entry(window, textvariable=item).grid(row=1, column=1, sticky=W)
 Button(window, text="Add Item", command=add, padx=30).grid(
     row=3, column=0, columnspan=3)
 
-Button(window, text="Remove Item", command=remove,
+Button(window, text="Delete Item", command=remove,
        padx=30).grid(row=3, column=3)
 
+Button(window, text="Delete All Items", command=remove,
+       padx=30).grid(row=3, column=3)
 
 window.mainloop()

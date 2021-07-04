@@ -9,8 +9,8 @@ def createList(shopping):
 
 def listIndex(shopping, item):
 
-    lengthOfList = int(len(shopping)) - 1
-    index = lengthOfList
+    index = -1
+    lengthOfList = len(shopping)
     for i in range(lengthOfList):
         if shopping[i][0] == item:
             index = i
@@ -76,12 +76,12 @@ Entry(window, textvariable=item).grid(row=1, column=1, sticky=W)
 
 # Buttons
 Button(window, text="Add Item", command=add, padx=30).grid(
-    row=3, column=0, columnspan=3)
+    row=2, column=0, columnspan=1)
 
 Button(window, text="Delete Item", command=remove,
-       padx=30).grid(row=3, column=3)
+       padx=30).grid(row=2, column=1)
 
 Button(window, text="Delete All Items", command=remove,
-       padx=30).grid(row=3, column=3)
+       padx=30).grid(row=2, column=3)
 
 window.mainloop()

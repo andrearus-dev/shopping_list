@@ -8,8 +8,9 @@ def createList(shopping):
 
 
 def listIndex(shopping, item):
-    index = ""
-    lengthOfList = len(shopping) - 1
+
+    lengthOfList = int(len(shopping)) - 1
+    index = lengthOfList
     for i in range(lengthOfList):
         if shopping[i][0] == item:
             index = i

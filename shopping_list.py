@@ -3,13 +3,14 @@ from tkinter import *
 
 
 def createList(shopping):
-    for elem in shopping:
-        theList.insert(END, elem[0] + "-" + str(elem[1]))
+    for food_item in shopping:
+        theList.insert(END, food_item[0])
 
 
 def listIndex(shopping, item):
-    index = -1
-    for i in range(len(shopping)):
+    index = ""
+    lengthOfList = len(shopping) - 1
+    for i in range(lengthOfList):
         if shopping[i][0] == item:
             index = i
     return index
